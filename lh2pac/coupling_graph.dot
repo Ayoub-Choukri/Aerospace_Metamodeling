@@ -1,0 +1,122 @@
+digraph {
+	aerodynamic -> approach [label=cl_max_ld color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'aerodynamic', Name in discipline 'approach'
+
+cl_max_ld, cl_max_ld, cl_max_ld" penwidth=1.0]
+	aerodynamic -> climb [label="cx0, ki" color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'aerodynamic', Name in discipline 'climb'
+
+ki, ki, ki
+cx0, cx0, cx0" penwidth=1.0]
+	aerodynamic -> mission [label="cx0, ki" color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'aerodynamic', Name in discipline 'mission'
+
+ki, ki, ki
+cx0, cx0, cx0" penwidth=1.0]
+	aerodynamic -> operating_cost [label="cx0, ki" color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'aerodynamic', Name in discipline 'operating_cost'
+
+ki, ki, ki
+cx0, cx0, cx0" penwidth=1.0]
+	aerodynamic -> take_off [label=cl_max_to color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'aerodynamic', Name in discipline 'take_off'
+
+cl_max_to, cl_max_to, cl_max_to" penwidth=1.0]
+	battery -> mass [label=m_battery color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'battery', Name in discipline 'mass'
+
+m_battery, m_battery, m_battery" penwidth=1.0]
+	battery -> operating_cost [label=m_battery color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'battery', Name in discipline 'operating_cost'
+
+m_battery, m_battery, m_battery" penwidth=1.0]
+	battery -> total_mass [label=mbm color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'battery', Name in discipline 'total_mass'
+
+mbm, mbm, mbm" penwidth=1.0]
+	engine -> climb [label=fn_mcl color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'engine', Name in discipline 'climb'
+
+fn_mcl, fn_mcl, fn_mcl" penwidth=1.0]
+	engine -> mass [label="m_engine, m_fuel_cell" color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'engine', Name in discipline 'mass'
+
+m_fuel_cell, m_fuel_cell, m_fuel_cell
+m_engine, m_engine, m_engine" penwidth=1.0]
+	engine -> mission [label="sec, sfc" color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'engine', Name in discipline 'mission'
+
+sec, sec, sec
+sfc, sfc, sfc" penwidth=1.0]
+	engine -> operating_cost [label="m_engine, m_fuel_cell, sec, sfc" color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'engine', Name in discipline 'operating_cost'
+
+sec, sec, sec
+m_fuel_cell, m_fuel_cell, m_fuel_cell
+sfc, sfc, sfc
+m_engine, m_engine, m_engine" penwidth=1.0]
+	engine -> take_off [label=fn_ton color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'engine', Name in discipline 'take_off'
+
+fn_ton, fn_ton, fn_ton" penwidth=1.0]
+	fuel_tank -> mass [label=m_tank color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'fuel_tank', Name in discipline 'mass'
+
+m_tank, m_tank, m_tank" penwidth=1.0]
+	fuel_tank -> operating_cost [label=m_tank color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'fuel_tank', Name in discipline 'operating_cost'
+
+m_tank, m_tank, m_tank" penwidth=1.0]
+	fuel_tank -> total_mass [label=mfm color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'fuel_tank', Name in discipline 'total_mass'
+
+mfm, mfm, mfm" penwidth=1.0]
+	geometry -> aerodynamic [label=length color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'geometry', Name in discipline 'aerodynamic'
+
+length, length, length" penwidth=1.0]
+	geometry -> battery [label=tkv color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'geometry', Name in discipline 'battery'
+
+tkv, tkv, tkv" penwidth=1.0]
+	geometry -> fuel_tank [label=tkv color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'geometry', Name in discipline 'fuel_tank'
+
+tkv, tkv, tkv" penwidth=1.0]
+	geometry -> mass [label=span color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'geometry', Name in discipline 'mass'
+
+span, span, span" penwidth=1.0]
+	mass -> operating_cost [label="oem, payload" color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'mass', Name in discipline 'operating_cost'
+
+oem, oem, oem
+payload, payload, payload" penwidth=1.0]
+	mass -> total_mass [label="oem, payload, payload_max" color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'mass', Name in discipline 'total_mass'
+
+oem, oem, oem
+payload_max, payload_max, payload_max
+payload, payload, payload" penwidth=1.0]
+	mission -> battery [label=total_enrg color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'mission', Name in discipline 'battery'
+
+total_enrg, total_enrg, total_enrg" penwidth=1.0]
+	mission -> total_mass [label="total_enrg, total_fuel" color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'mission', Name in discipline 'total_mass'
+
+total_enrg, total_enrg, total_enrg
+total_fuel, total_fuel, total_fuel" penwidth=1.0]
+	total_mass -> approach [label=mlm color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'total_mass', Name in discipline 'approach'
+
+mlm, mlm, mlm" penwidth=1.0]
+	total_mass -> climb [label=mtom color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'total_mass', Name in discipline 'climb'
+
+mtom, mtom, mtom" penwidth=1.0]
+	total_mass -> mass [label="mtom, mzfm" color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'total_mass', Name in discipline 'mass'
+
+mtom, mtom, mtom
+mzfm, mzfm, mzfm" penwidth=1.0]
+	total_mass -> mission [label=mtom color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'total_mass', Name in discipline 'mission'
+
+mtom, mtom, mtom" penwidth=1.0]
+	total_mass -> operating_cost [label=mtom color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'total_mass', Name in discipline 'operating_cost'
+
+mtom, mtom, mtom" penwidth=1.0]
+	total_mass -> take_off [label=mtom color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'total_mass', Name in discipline 'take_off'
+
+mtom, mtom, mtom" penwidth=1.0]
+	approach -> _approach [label=vapp color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'approach'
+
+vapp, vapp" penwidth=1.0]
+	_approach [style=invis]
+	climb -> _climb [label=vz color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'climb'
+
+vz, vz" penwidth=1.0]
+	_climb [style=invis]
+	operating_cost -> _operating_cost [label="coc, doc" color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'operating_cost'
+
+coc, coc
+doc, doc" penwidth=1.0]
+	_operating_cost [style=invis]
+	take_off -> _take_off [label=tofl color=black dir=forward fontcolor=black labeltooltip="Global name, Name in discipline 'take_off'
+
+tofl, tofl" penwidth=1.0]
+	_take_off [style=invis]
+}
